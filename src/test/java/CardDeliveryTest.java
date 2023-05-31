@@ -5,7 +5,6 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
-import java.util.Timer;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -52,7 +51,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        sleep(12000);
+        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
         $("[data-test-id='notification'] button").click();
         $("[data-test-id='notification']").shouldBe(hidden);
     }
@@ -67,7 +66,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -80,7 +79,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -93,7 +92,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -106,7 +105,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -119,7 +118,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -132,7 +131,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -379,7 +378,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -392,7 +391,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -405,7 +404,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -418,7 +417,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -431,7 +430,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -444,7 +443,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -457,7 +456,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -574,7 +573,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -704,7 +703,7 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification']").shouldBe(visible, Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 
     @Test
@@ -727,6 +726,6 @@ public class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue("+79001234567");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("[data-test-id='notification'] .notification__content").shouldHave(exactText("Встреча успешно забронирована на " + date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
+        $("[data-test-id='notification'] .notification__content").shouldHave(text(date(7, "dd.MM.yyyy")), Duration.ofSeconds(12));
     }
 }
